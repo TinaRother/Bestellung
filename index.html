@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website A</title>
+    <style>
+        button {
+            font-size: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drücke einen Button</h1>
+    <button onclick="trackButton('A')">A</button>
+    <button onclick="trackButton('B')">B</button>
+    <button onclick="trackButton('C')">C</button>
+    <button onclick="trackButton('D')">D</button>
+    <button onclick="trackButton('E')">E</button>
+    <button onclick="trackButton('F')">F</button>
+    <button onclick="trackButton('G')">G</button>
+
+    <script>
+        function trackButton(letter) {
+            fetch(`https://your-server-url/track?button=${letter}`, { method: 'POST' });
+        }
+    </script>
+</body>
+</html>
